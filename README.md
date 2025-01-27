@@ -6,7 +6,7 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
 
 ## Prerequisites
 1. **Windows OS**
-2. **PowerShell** (pre-installed on Windows)
+2. **PowerShell and CMD** (pre-installed on Windows)
 3. **Internet connection** (for initial setup and downloading models)
 
 ---
@@ -31,36 +31,37 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
 3. Click **OK** to save the changes.
 
 ### 1.4 Install Ollama
-1. Open **PowerShell** as Administrator.
+1. Open **CMD** as Administrator.
 2. Run the following command to install Ollama in the custom folder:
-   ```powershell
+   ```cmd
    ollamasetup.exe /DIR="E:/LLM/ollama"
    ```
 3. Verify the installation location:
-   ```powershell
+   ```cmd
    where ollama
    ```
 
 ### 1.5 Run a Model
 1. To test Ollama, run a model (e.g., `deepseek-r1:1.5b`):
-   ```powershell
+   ```cmd
    ollama run deepseek-r1:1.5b
    ```
 2. Exit the chat by typing `/bye`.
-3. List all available models:
-   ```powershell
+   #### Basic ollama commands to know
+4. List all available models:
+   ```cmd
    ollama list
    ```
-4. Check running models:
-   ```powershell
+5. Check running models:
+   ```cmd
    ollama ps
    ```
-5. Stop a running model:
-   ```powershell
+6. Stop a running model:
+   ```cmd
    ollama stop <model_name>
    ```
-6. Delete a model:
-   ```powershell
+7. Delete a model:
+   ```cmd
    ollama rm <model_name>
    ```
 
@@ -71,7 +72,7 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
 4. Remove the environment variable `OLLAMA_MODELS`:
    - Open **Environment Variables** and delete the `OLLAMA_MODELS` entry.
 5. Delete the Ollama folder (`E:/LLM/ollama`) if it still exists.
-
+6. Also Remove that System Environment Variable 'OLLAMA_MODELS'
 ---
 
 ## Step 2: Install Open WebUI (Without Docker) [openwebui Docs](https://docs.openwebui.com/)
@@ -93,7 +94,7 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
 ### 2.3 Install Open WebUI
 1. Set Up Cache folder
 ```powershell
-uv run --cache-dir E:/LLM/open_webui/cache
+$env:UV_CACHE_DIR = "E:/LLM/open_webui/cache"
 ```
 3. Run the following command to install Open WebUI:
    ```powershell
