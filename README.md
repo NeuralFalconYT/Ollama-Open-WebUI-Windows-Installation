@@ -96,7 +96,7 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
 3. Run the following command to install Open WebUI:
 
    ```powershell
-   $env:UV_CACHE_DIR = "E:/LLM/open_webui/cache";$env:DATA_DIR="E:/LLM/open_webui/data"; uvx --python 3.11 open-webui@latest serv  
+   $env:UV_CACHE_DIR = "E:/LLM/open_webui/cache";$env:DATA_DIR="E:/LLM/open_webui/data"; uvx --python 3.11 open-webui@latest serve  
    ```
    This will install Open WebUI , store all Python packages in the `cache` folder and keep all the chats in `data` folder
 
