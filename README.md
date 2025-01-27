@@ -91,13 +91,17 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
    - `data`: For storing chat data and uploaded images.
 
 ### 2.3 Install Open WebUI
-1. Run the following command to install Open WebUI:
+1. Set Up Cache folder
+```powershell
+uv run --cache-dir E:/LLM/open_webui/cache
+```
+3. Run the following command to install Open WebUI:
    ```powershell
    $env:DATA_DIR="E:/LLM/open_webui/data"; uvx --python 3.11 open-webui@latest serve
    ```
    This will install Open WebUI and store all Python packages in the `cache` folder.
 
-2. Once the installation is complete, Open WebUI will start a local server. Access it using:
+4. Once the installation is complete, Open WebUI will start a local server. Access it using:
    - If `http://0:0:0:8080` does not work, use:
 
      - `http://127.0.0.1:8080/`
