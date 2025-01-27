@@ -92,17 +92,15 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
    - `data`: For storing chat data and uploaded images.
 
 ### 2.3 Install Open WebUI
-1. Set Up Cache folder
-```powershell
-$env:UV_CACHE_DIR = "E:/LLM/open_webui/cache"
-```
-3. Run the following command to install Open WebUI:
-   ```powershell
-   $env:DATA_DIR="E:/LLM/open_webui/data"; uvx --python 3.11 open-webui@latest serve
-   ```
-   This will install Open WebUI and store all Python packages in the `cache` folder.
 
-4. Once the installation is complete, Open WebUI will start a local server. Access it using:
+3. Run the following command to install Open WebUI:
+
+   ```powershell
+   $env:UV_CACHE_DIR = "E:/LLM/open_webui/cache";$env:DATA_DIR="E:/LLM/open_webui/data"; uvx --python 3.11 open-webui@latest serv  
+   ```
+   This will install Open WebUI , store all Python packages in the `cache` folder and keep all the chats in `data` folder
+
+5. Once the installation is complete, Open WebUI will start a local server. Access it using:
    - If `http://0:0:0:8080` does not work, use:
 
      - `http://127.0.0.1:8080/`
@@ -118,7 +116,7 @@ $env:DATA_DIR="E:/LLM/open_webui/data"; uvx --python 3.11 open-webui@latest serv
 1. Open **PowerShell**.
 2. Clean the Python packages cache:
    ```powershell
-   uv clean
+   uv clean --cache-dir "E:/LLM/open_webui/cache"
    ```
 3. Locate the UV installation path:
    ```powershell
@@ -142,7 +140,32 @@ $env:DATA_DIR="E:/LLM/open_webui/data"; uvx --python 3.11 open-webui@latest serv
    E:/LLM/open_webui/data
    ```
 
+
+
+
+## **To Use Ollama and Open WebUI Again**
+
+### **Steps**
+1. **Start Ollama**:
+   ```bash
+   ollama run deepseek-r1:1.5b
+   ```
+   Exit with `/bye`.
+
+2. **Run Open WebUI**:
+   ```powershell
+   $env:UV_CACHE_DIR = "E:/LLM/open_webui/cache"; $env:DATA_DIR = "E:/LLM/open_webui/data"; uvx --python 3.11 open-webui@latest serve
+   ```
+
 ---
+
+### **Notes**
+- Set `UV_CACHE_DIR` and `DATA_DIR` to your desired paths.
+- Ensure directories exist before running.
+
+---
+
+
 
 ## Conclusion
 You have successfully set up **Ollama** and **Open WebUI** on your local machine. This setup allows you to run LLMs **privately** and **offline**. You can also uninstall both tools when they are no longer needed. Enjoy experimenting with open-source LLMs!
