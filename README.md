@@ -74,7 +74,7 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
 
 ---
 
-## Step 2: Install Open WebUI (Without Docker)
+## Step 2: Install Open WebUI (Without Docker) [openwebui Docs](https://docs.openwebui.com/)
 
 ### 2.1 Install UV Package Manager
 1. Open **PowerShell**.
