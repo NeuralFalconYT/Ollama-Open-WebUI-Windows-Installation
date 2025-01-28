@@ -37,6 +37,7 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
    ollamasetup.exe /DIR="E:/LLM/ollama"
    ```
 3. Verify the installation location:
+   Open New CMD terminal Then use
    ```cmd
    where ollama
    ```
