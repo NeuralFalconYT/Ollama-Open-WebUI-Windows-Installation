@@ -65,8 +65,9 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
    ```cmd
    ollama rm <model_name>
    ```
-
-### 1.6 Uninstall Ollama
+### 1.6 Import a Custom GGUF Model into Ollama (If It’s Not Listed on [Ollama Models](https://ollama.com/search))
+Refer to the full setup guide here: [Custom GGUF Model Setup for Ollama (Windows)](https://github.com/NeuralFalconYT/Ollama-Open-WebUI-Windows-Installation/blob/main/custom-gguf-ollama-setup.md)
+### 1.7 Uninstall Ollama
 1. Stop all Ollama servers and exit any open Ollama sessions.
 2. Go to **Settings** -> **Apps** -> **Installed Apps**.
 3. Find **Ollama** and click **Uninstall**.
