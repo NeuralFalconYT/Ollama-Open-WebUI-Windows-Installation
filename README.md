@@ -1,5 +1,5 @@
 # Ollama and Open WebUI Windows Installation Guide
-
+If you get stuck, use ChatGPT for help, Google it, or watch a tutorial on YouTube. <br> <br>
 This guide will walk you through setting up **Ollama** and **Open WebUI** on a Windows system. The installation will be done in a **custom folder** (e.g., on the `E:` drive) to avoid consuming space on the `C:` drive. You will also learn how to uninstall both tools when needed. This setup allows you to run open-source large language models (LLMs) **privately** and **offline** on your local machine.
 
 ---
