@@ -112,8 +112,10 @@ To start Open WebUI again, run the following command:
 ```powershell
 $env:DATA_DIR="E:/LLM/open_webui/data"; uvx --python 3.11 open-webui@latest serve
 ```
+### 2.5 Delete all your messages
+If you're curious where your messages are saved, they're stored here in our case: ```E:\LLM\open_webui\data\webui.db```. You can delete the webui.db file if you want.
 
-### 2.5 Uninstall Open WebUI
+### 2.6 Uninstall Open WebUI
 1. Open **PowerShell**.
 2. Clean the Python packages cache:
    ```powershell
