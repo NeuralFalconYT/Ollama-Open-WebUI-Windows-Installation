@@ -34,7 +34,7 @@ This guide will walk you through setting up **Ollama** and **Open WebUI** on a W
 1. Open **CMD** as Administrator.
 2. Run the following command to install Ollama in the custom folder:
    ```cmd
-   ollamasetup.exe /DIR="E:/LLM/ollama"
+   .\OllamaSetup.exe /DIR="E:\LLM\ollama"
    ```
 3. Verify the installation location:<br>
    Open New CMD terminal Then use
